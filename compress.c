@@ -50,18 +50,18 @@ void encode(char* input_file,char* output_file){
     struct node* freq=NULL;
     struct binary_tree* tree;
     key2=(char*)malloc(20*sizeof(char));
-    read_file("deneme.txt",&file,&file2);
+    read_file(input_file,&file,&file2);
     distinct(file,&freq);
     destroy_list(&file);
     tree_init(&tree);
     create_tree(tree,&freq);
     leaf_path(tree->root,-1,"\0");
-    write_file("encoded.dat",file2,tree);
+    write_file(output_file,file2,tree);
     destroy_list(&file2);
 }
 
 
 int main(){
-    encode("deneme.txt","encoded.dat");
+    encode("INPUT_FILE","OUTPUT_FILE");
     return 0;
 }
