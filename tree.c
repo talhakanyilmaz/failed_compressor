@@ -14,20 +14,6 @@ void tree_init(struct binary_tree** tree){
     (*tree)->root=NULL;
 }
 
-void preorder_yardimci(struct node *kok){
-    
-    if(kok==NULL) return;
-   /*  if(strcmp(kok->key,"\'")!=0) */    printf("%s-%d- %s\n",kok->key,kok->count,kok->bits);
-    preorder_yardimci(kok->left);
-    preorder_yardimci(kok->right);
-    
-}
-void preorder(struct binary_tree *agac){
-    if(agac==NULL) return;
-    preorder_yardimci(agac->root);
-    printf("\n");
-}
-
 struct node *create_node_T(char* key,struct node* node){
     struct node* new_node;
     new_node=(struct node*)malloc(sizeof(struct node));
