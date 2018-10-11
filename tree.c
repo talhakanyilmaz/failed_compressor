@@ -70,7 +70,7 @@ struct node* in_order_insert_T(char* key,struct node **head,struct node* temp){
 
 void find_leaf(struct node* root,char* key){
     if(root==NULL) return;
-    if(strcmp(root->key,key)==0) strcpy(key2,root->bits);// return root->bits;
+    if(strcmp(root->key,key)==0) strcpy(key2,root->bits);
     find_leaf(root->left,key);
     find_leaf(root->right,key);
  }
