@@ -39,9 +39,6 @@ void write_file(char* file_name,struct node* file,struct binary_tree* tree){
         fprintf(fp,key2);
         file=file->next;
     }
-    fprintf(fp,".");
-    write_tree(tree->root,fp);
-    fclose(fp);
 }
 
 void encode(char* input_file,char* output_file){
